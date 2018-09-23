@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    {% include head.html %}
+
+    <body class="layout-reverse theme-base-00">
+
+    {% include sidebar.html %}
+
+        <div class="content container">
+
+            {% for post in page.archive.posts reversed %}
+                {% capture post_month %}{{ post.date | date: "%B" }}{% endcapture %}
+                {% if post_month != current_month %}
+                    {% unless forloop.first %}</ul>{% endunless %}
+                        <p>{{ post_month }}</p>
+                        <ul class="post-list">
+                    {% capture current_month %}{{ post_month }}{% endcapture %}
+                {% endif %}
+
+                <li>
+                    <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                    <!-- <small class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</small> -->
+                </li>
+            {% endfor %}
+            </ul>
+
+            <!-- Pagination links -->
+
+            <hr>
+            <nav class="pagination">
+                {% if page.archive.paginator.previous_page %}
+                <a href="{{ page.archive.paginator.previous_page_path }}" class="previous">Previous</a>
+                {% else %}
+                <span class="previous">Previous</span>
+                {% endif %}
+                &nbsp;
+                <span class="page_number">Page: {{ page.archive.paginator.page }} of {{ page.archive.paginator.total_pages }}</span>
+                &nbsp;
+                {% if page.archive.paginator.next_page %}
+                <a href="{{ page.archive.paginator.next_page_path }}" class="next">Next</a>
+                {% else %}
+                <span class="next">Next</span>
+                {% endif %}
+            </nav>
+
+        </div>
+    </body>
+</html>

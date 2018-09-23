@@ -1,0 +1,56 @@
+# Dependencies
+markdown: kramdown
+
+# Permalinks
+permalink: pretty
+#relative_permalinks: true
+
+# Setup
+title:            'Netcat'
+tagline:          '0xBADCA7'
+description:      'InfoSec practitioner and a hardcore CTFer. I write on infosec issues, review CTF tasks, share tools, academic papers and articles that interest me, disclose vulnerabilities and dissect software into bits. This is a web log of <a href="https://twitter.com/0xBADCA7" target="_blank">@0xBADCA7</a>. Views are my own (as well as models and controllers).'
+url:              'https://breaking.into.systems'
+baseurl:          'https://breaking.into.systems/'
+permalink:        /read/:year/:title
+
+author:
+  name:           '0xBADCA7'
+  url:            'https://twitter.com/0xBADCA7'
+
+paginate:         10
+ga:               'UA-112849757-1'
+
+# Custom vars
+version:          1.5
+excerpt_separator: <!--more-->
+github: 'https://github.com/0xBADCA7'
+repo: 'https://github.com/0xBADCA7/0xBADCA7.github.io'
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
+user_picture: 'https://pbs.twimg.com/profile_images/2514466072/szxf4hn1m6zrlcg0bvd0.gif'
+
+jekyll-archive:
+    - path: /archive/:year
+      layout: archive
+      title: Log archive — :year
+      exclude:
+        categories: ['news']
+        tags: ['drafts']
+    - path: /archive/:year/:month
+      layout: archive
+      title: Log archive — :month :year
+      exclude:
+        categories: ['news']
+        tags: ['drafts']
+    - path: /archive/:year/:month/:day
+      layout: archive
+      title: Log archive — :month :day, :year
+      exclude:
+        categories: ['news']
+        tags: ['drafts']
+
+plugins:
+    - jekyll-archives
+    - jekyll-paginate
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
