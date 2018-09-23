@@ -19,16 +19,16 @@ The site maintainer's public key(s) can be found [here]({{ site.repo }}/tree/mas
 $ gpg --list-keys --with-fingerprint 94173E5CB0D001A0
 pub   4096R/0x9EF4A285A3C0BB4E 2015-03-05
       Key fingerprint = CD28 0146 92F1 0D3B C013  01A9 9EF4 A285 A3C0 BB4E
-uid                 [ultimate] Megacat (Mawoo) <0xBADCA7@gmail.com>
-uid                 [ultimate] Megacat (Blog signing key) <0xBADCA7@gmail.com>
+uid                 [ultimate] Megacat (Mawoo) <0xBADCA7@...>
+uid                 [ultimate] Megacat (Blog signing key) <0xBADCA7@...>
 sub   4096R/0xC9AB675C3146EEF4 2015-03-05
 sub   4096R/0x94173E5CB0D001A0 2015-03-05
 sub   4096R/0x243F9B38C04BCC3C 2015-05-10
 
 gpg> check
-uid  Megacat (Mawoo) <0xBADCA7@gmail.com>
+uid  Megacat (Mawoo) <0xBADCA7@...>
 sig!3        0x9EF4A285A3C0BB4E 2015-05-10  [self-signature]
-uid  Megacat (Blog signing key) <0xBADCA7@gmail.com>
+uid  Megacat (Blog signing key) <0xBADCA7@...>
 sig!3        0x9EF4A285A3C0BB4E 2015-05-10  [self-signature]
 
 ~~~
@@ -40,9 +40,9 @@ $ git log --show-signature
 commit c705c10018b416707a70279dd2100f58982a7893
 gpg: Signature made Sun May 10 23:10:24 2015 CEST
 gpg:                using RSA key 0x243F9B38C04BCC3C
-gpg: Good signature from "Megacat (Mawoo) <0xBADCA7@gmail.com>" [ultimate]
-gpg:                 aka "Megacat (Blog signing key) <0xBADCA7@gmail.com>" [ultimate]
-Author: 0xBADCA7 <0xBADCA7@gmail.com>
+gpg: Good signature from "Megacat (Mawoo) <0xBADCA7@...>" [ultimate]
+gpg:                 aka "Megacat (Blog signing key) <0xBADCA7@...>" [ultimate]
+Author: 0xBADCA7 <0xBADCA7@...>
 Date:   Sun May 10 23:10:24 2015 +0200
 
     Scaffold up Jekyll and migrate old posts
