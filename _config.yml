@@ -6,7 +6,7 @@ permalink: pretty
 #relative_permalinks: true
 
 # Setup
-title:            'Netcat'
+title:            'netcat''s logs'
 tagline:          '0xBADCA7'
 description:      'InfoSec practitioner and a hardcore CTFer. I write on infosec issues, review CTF tasks, share tools, academic papers and articles that interest me, disclose vulnerabilities and dissect software into bits. This is a web log of <a href="https://twitter.com/0xBADCA7" target="_blank">@0xBADCA7</a>. Views are my own (as well as models and controllers).'
 url:              'https://breaking.into.systems'
@@ -26,7 +26,7 @@ excerpt_separator: <!--more-->
 github: 'https://github.com/0xBADCA7'
 repo: 'https://github.com/0xBADCA7/0xBADCA7.github.io'
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
-user_picture: 'https://pbs.twimg.com/profile_images/2514466072/szxf4hn1m6zrlcg0bvd0.gif'
+user_picture: 'https://pbs.twimg.com/profile_images/1066541527046877189/b_yhc_d9_400x400.jpg'
 
 jekyll-archive:
     - path: /archive/:year
